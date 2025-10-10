@@ -1,0 +1,12 @@
+/*Atribute: vlera ; 
+-padding shtyn elementin prej jashtit
+*/
+p{
+    color: pink; 
+    width: 150px; 
+    font-family: sans-serif; 
+    text-align: center; 
+    font-weight: bold;
+    border: 1px solid red;
+    padding: 10px 20px;
+}
