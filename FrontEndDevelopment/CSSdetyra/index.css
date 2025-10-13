@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(199, 120, 132);
+    margin: 25px;
+    color: #333;
+}
+
+h1 {
+    color:pink;
+    margin-bottom: 5px;
+}
+
+p.contact {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: pink;
+    border-bottom: 2px solid pink;
+    padding-bottom: 4px;
+    margin-top: 25px; 
+}
+
+p, li {
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: black  ;
+    font-size: 14px;
+}
