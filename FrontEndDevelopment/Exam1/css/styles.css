@@ -260,7 +260,8 @@ body {
 
 .final {
   position: relative;
-  background: url("../img/Rectangle8.png");
+  background: url("../img/Rectangle8.png") no-repeat center center;
+  background-size: cover;
   color: #fff;
   text-align: center;
   padding: 6rem 2rem;
@@ -282,6 +283,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 .final .overlay {
@@ -290,18 +292,18 @@ body {
   max-width: 700px;
 }
 .final .overlay h2 {
-  color: #000;
+  color: #fff;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 .final .overlay p {
-  color: #000000;
+  color: #fff;
   margin-bottom: 2rem;
 }
 .final .overlay .btn {
   background: none;
-  border: 2px solid #000;
-  color: #000;
+  border: 2px solid #fff;
+  color: #fff;
   border-radius: 25px;
   padding: 0.8rem 1.9rem;
   cursor: pointer;
