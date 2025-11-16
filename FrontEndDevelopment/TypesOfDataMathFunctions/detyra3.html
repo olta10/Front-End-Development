@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execute a currency converter. A user puts in USD, chooses a currency (EUR, SEK, AUD etc.) and gets the result. </title>
+</head>
+<body>
+    <script>
+        let usd = parseFloat(prompt("Shkruaj shumen në USD:"));
+        let currency = prompt("Shkruaj valuten qe dëshiron (EUR, SEK, AUD):").toUpperCase();
+
+        const rates = {
+            "EUR": 0.94,
+            "SEK": 11.23,
+            "AUD": 1.53
+        };
+
+        if (rates[currency]) {
+            let converted = usd * rates[currency];
+            alert(`${usd} USD jane ${converted.toFixed(2)} ${currency}`);
+        } else {
+            alert("Valuta nuk eshte e njohur.");
+        }
+
+    </script>
+</body>
+</html>

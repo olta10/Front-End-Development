@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelat e Shumezimit</title>
+</head>
+<body>
+
+<pre id="output"></pre>
+
+<script>
+    let output = "";
+
+    for (let i = 2; i <= 9; i++) {
+        output += "Tabela per " + i + ":\n";
+        for (let j = 1; j <= 10; j++) {
+            output += `${i} x ${j} = ${i * j}\n`;
+        }
+        output += "\n";
+    }
+
+    document.getElementById("output").innerText = output;
+</script>
+
+</body>
+</html>

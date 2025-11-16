@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhvendosja e shifrave të numrit</title>
+</head>
+<body>
+    <script>
+    let number2 = prompt("Shkruaj numrin:");
+    let moves = parseInt(prompt("Sa shifra te zhvendosen?"));
+
+    moves = moves % number2.length;
+
+    let moved = number2.slice(moves) + number2.slice(0, moves);
+
+    alert("Rezultati: " + moved);
+    </script>
+    
+</body>
+</html>

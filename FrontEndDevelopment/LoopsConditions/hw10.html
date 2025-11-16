@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja “Guess the number” (binary search)</title>
+</head>
+<body>
+    <script>
+        let min = 0;
+        let max = 100;
+        let mid;
+
+        alert("Mendo një numer nga 0 deri 100!");
+
+        while (true) {
+            mid = Math.floor((min + max) / 2);
+
+            let answer = prompt(`A eshte numri yt > ${mid}, < ${mid}, apo == ${mid}?`);
+
+            if (answer === ">") {
+                min = mid + 1;
+            } 
+            else if (answer === "<") {
+                max = mid - 1;
+            } 
+            else if (answer === "==") {
+                alert("Numri yt eshte: " + mid);
+                break;
+            } 
+            else {
+                alert("Shkruaj vetem > , < , ==");
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

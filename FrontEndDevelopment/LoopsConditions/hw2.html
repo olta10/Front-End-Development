@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gjetja e përbashkuesit më të madh (GCD)</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Shkruaj numrin e pare:"));
+        let b = parseInt(prompt("Shkruaj numrin e dyte:"));
+
+        while (a !== b) {
+            if (a > b) a -= b;
+            else b -= a;
+        }
+
+        alert("Perbashkuesi me i madh eshte: " + a);
+    </script>
+</body>
+</html>

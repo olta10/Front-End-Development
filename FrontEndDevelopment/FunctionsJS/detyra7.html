@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funksion qe kthen kohe ne formatin hh:mm:ss</title>
+</head>
+<body>
+    <script>
+        function formatTime(h, m, s = 0) {
+        function fix(x) {
+            return x < 10 ? "0" + x : x;
+        }
+
+        return `${fix(h)}:${fix(m)}:${fix(s)}`;
+    }
+    console.log(formatTime(9, 5, 3));
+
+    </script>
+    
+</body>
+</html>

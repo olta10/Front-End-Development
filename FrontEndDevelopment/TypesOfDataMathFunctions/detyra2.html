@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a five-unit number from a user and check whether it is a palindrome.</title>
+</head>
+<body>
+    <script>
+        let num5 = prompt("Shkruaj nje numer pese-shifror:");
+            if (num5.length === 5) {
+                let reversed = num5.split("").reverse().join("");
+                if (num5 === reversed) {
+                    alert("Numri eshte palindrom.");
+                } else {
+                    alert("Numri nuk eshte palindrom.");
+                }
+            } else {
+                alert("Ju lutem shkruani nje numer pese-shifror.");
+            }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objekti Car</title>
+</head>
+<body>
+    <script>
+        const car = {
+            manufacturer: "Mercedes",
+            model: "GLC",
+            year: 2024,
+            avgSpeed: 180, 
+
+            showInfo: function() {
+                alert(`Manufacturer: ${this.manufacturer}\nModel: ${this.model}\nYear: ${this.year}\nAverage speed: ${this.avgSpeed} km/h`);
+            },
+
+            timeForDistance: function(distance) {
+                let time = distance / this.avgSpeed;           
+                let breaks = Math.floor(time / 4);          
+                let totalTime = time + breaks;               
+                let hours = Math.floor(totalTime);
+                let minutes = Math.round((totalTime - hours) * 60);
+                alert(`Distance: ${distance} km\nTime needed: ${hours} hours and ${minutes} minutes`);
+            }
+        }
+
+        car.showInfo();  
+        let distance = parseFloat(prompt("Shkruaj distancën në km:"));
+        if (!isNaN(distance) && distance > 0) {
+            car.timeForDistance(distance);  
+        } else {
+            alert("Ju lutem shkruani një numër valid për distancën.");
+        }
+    </script>
+</body>
+</html>

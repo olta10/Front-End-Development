@@ -1,0 +1,58 @@
+@import '_reset';
+
+
+body{
+    p{
+        color: red
+    }
+}
+.tes{
+    .test-2{
+        test-3{
+        color: blue;
+        }
+    }
+}
+$primary-dark: #043873;
+$primary-light: #4F9CF9;
+$accent: #FFE492;
+$danger: red;
+
+.btn{
+    background-color: $primary-dark;
+    &:hover{
+        background: $primary-light;
+    }
+    &--delete{
+        background: $danger;
+    }
+}
+.card {
+    @extend %fullBlock;
+    color: orange;
+    &__image {
+        color: red;
+    }
+    &__content {
+        color: blue;
+    }
+}
+%fullBlock {
+    float: left;
+    width: 100%;
+}
+
+@mixin buttonHover($baseColor,$hoverColor){
+    background: $baseColor;
+   
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1170px;
+    width: 100%;
+
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a length of a circumference and a perimeter of a square from a user. Define whether that circumference can fit in that square.</title>
+</head>
+<body>
+    <script>
+        let circumference = parseFloat(prompt("Shkruaj gjatesine e rrethit:"));
+        let squarePerimeter = parseFloat(prompt("Shkruaj perimetrin e katrorit:"));
+
+        let circleDiameter = circumference / Math.PI;
+        let squareSide = squarePerimeter / 4;
+
+        if (circleDiameter <= squareSide) {
+            alert("Rrethi mund te futet brenda katrorit.");
+        } else {
+            alert("Rrethi nuk mund te futet brenda katrorit.");
+        }
+    </script>
+</body>
+</html>

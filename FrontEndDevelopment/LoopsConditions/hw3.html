@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shfaq te gjithe pjesetuesit e nje numri</title>
+</head>
+<body>
+    <script>
+        let number = parseInt(prompt("Shkruaj nje numer:"));
+        let result = "Pjesetuesit: ";
+
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                result += i + " ";
+            }
+        }
+
+        alert(result);
+    </script>
+    
+</body>
+</html>

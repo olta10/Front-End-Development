@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funksioni qe gjen ndryshimin midis dy datave ne hh:mm:ss</title>
+</head>
+<body>
+    <script>
+    function timeToSeconds(hours, minutes, seconds) {
+        return hours * 3600 + minutes * 60 + seconds;
+    }
+
+    function secondsToTime(totalSeconds) {
+        let h = Math.floor(totalSeconds / 3600);
+        let m = Math.floor((totalSeconds % 3600) / 60);
+        let s = totalSeconds % 60;
+
+        function fix(x) {
+            return x < 10 ? "0" + x : x;
+        }
+
+        return `${fix(h)}:${fix(m)}:${fix(s)}`;
+    }
+
+    function dateDifference(h1, m1, s1, h2, m2, s2) {
+        let seconds1 = timeToSeconds(h1, m1, s1);
+        let seconds2 = timeToSeconds(h2, m2, s2);
+
+        let diff = Math.abs(seconds2 - seconds1);
+
+        return secondsToTime(diff);
+    }
+
+    console.log(dateDifference(12, 30, 15, 14, 45, 20)); 
+    console.log(dateDifference(9, 0, 0, 10, 15, 30));
+    </script>
+    
+</body>
+</html>

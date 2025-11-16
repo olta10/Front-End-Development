@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent-elem{
+    float: left;
+    width: 500px;
+    background: pink;
+    position: relative;
+}
+
+.parent-elem__child{
+    float: left;
+    width: 200px;
+    height: 200px;
+    background: blue;
+}
+
+/*me nejt gjith ne mes katrori
+.parent-elem__child:nth-child(2){ 
+    background: red;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}*/
+
+.parent-elem__child:nth-child(2){ 
+    background: red;
+    transform: translate(-195deg);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 300px;
+    transform: scale(2.1);
+}

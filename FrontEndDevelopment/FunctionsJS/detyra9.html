@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funksioni që shndërron sekonda → hh:mm:ss</title>
+</head>
+<body>
+    <script>
+        function secondsToTime(totalSeconds) {
+            let h = Math.floor(totalSeconds / 3600);
+            let m = Math.floor((totalSeconds % 3600) / 60);
+            let s = totalSeconds % 60;
+
+            return formatTime(h, m, s);
+        }
+        function formatTime(h, m, s = 0) {
+            function fix(x) {
+                return x < 10 ? "0" + x : x;
+            }
+
+            return `${fix(h)}:${fix(m)}:${fix(s)}`;
+        }
+        console.log(secondsToTime(3661));
+        
+
+    </script>
+    
+</body>
+</html>

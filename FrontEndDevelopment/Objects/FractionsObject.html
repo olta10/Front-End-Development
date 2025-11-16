@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractions Object</title>
+</head>
+<body>
+<script>
+    function Fraction(numerator, denominator) {
+        this.numerator = numerator;
+        this.denominator = denominator;
+    }
+
+    function simplify(frac) {
+        function gcd(a, b) {
+            return b === 0 ? a : gcd(b, a % b);
+        }
+        let greatest = gcd(Math.abs(frac.numerator), Math.abs(frac.denominator));
+        frac.numerator /= greatest;
+        frac.denominator /= greatest;
+        return normalizeSign(frac);
+    }
+
+    function normalizeSign(frac) {
+        if (frac.denominator < 0) {
+            frac.numerator *= -1;
+            frac.denominator *= -1;
+        }
+        return frac;
+    }
+
+    function addFractions(f1, f2) {
+        let numerator = f1.numerator * f2.denominator + f2.numerator * f1.denominator;
+        let denominator = f1.denominator * f2.denominator;
+        return simplify(new Fraction(numerator, denominator));
+    }
+
+    function subtractFractions(f1, f2) {
+        let numerator = f1.numerator * f2.denominator - f2.numerator * f1.denominator;
+        let denominator = f1.denominator * f2.denominator;
+        return simplify(new Fraction(numerator, denominator));
+    }
+
+    function multiplyFractions(f1, f2) {
+        let numerator = f1.numerator * f2.numerator;
+        let denominator = f1.denominator * f2.denominator;
+        return simplify(new Fraction(numerator, denominator));
+    }
+
+    function divideFractions(f1, f2) {
+        let numerator = f1.numerator * f2.denominator;
+        let denominator = f1.denominator * f2.numerator;
+        return simplify(new Fraction(numerator, denominator));
+    }
+
+    let f1 = new Fraction(1, 2);
+    let f2 = new Fraction(3, 4);
+
+    let addResult = addFractions(f1, f2);
+    let subResult = subtractFractions(f1, f2);
+    let mulResult = multiplyFractions(f1, f2);
+    let divResult = divideFractions(f1, f2);
+
+    console.log(`Add: ${addResult.numerator}/${addResult.denominator}`);       
+    console.log(`Subtract: ${subResult.numerator}/${subResult.denominator}`); 
+    console.log(`Multiply: ${mulResult.numerator}/${mulResult.denominator}`);
+    console.log(`Divide: ${divResult.numerator}/${divResult.denominator}`);  
+
+</script>
+</body>
+</html>

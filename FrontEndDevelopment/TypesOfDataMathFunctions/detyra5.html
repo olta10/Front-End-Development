@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a date (dd:mm:yy) and put out the one that goes after it. Pay attention to the start of a new month, new year, and also leap years.</title>
+</head>
+<body>
+    <script>
+        let dateInput = prompt("Shkruaj nje date (dd:mm:yy):");
+        let parts = dateInput.split(":");
+        let day = parseInt(parts[0], 10);
+        let month = parseInt(parts[1], 10) - 1; 
+        let year = parseInt(parts[2], 10) + 2000; 
+
+        let date = new Date(year, month, day);
+        date.setDate(date.getDate() + 1);
+
+        let nextDay = ("0" + date.getDate()).slice(-2);
+        let nextMonth = ("0" + (date.getMonth() + 1)).slice(-2);
+        let nextYear = date.getFullYear().toString().slice(-2);
+
+        alert(`Data e neserme eshte: ${nextDay}:${nextMonth}:${nextYear}`);
+    </script>
+</body>
+</html>
